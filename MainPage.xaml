@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="App1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    
+    mc:Ignorable="d">
+
+    <Grid UseLayoutRounding="True">
+
+
+
+
+        <CheckBox x:Name="checkBoxVsource" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Content="Voltage Source (Volts)" FontSize="36" Width="609" Click="checkBoxVsource_CheckedChanged" Height="55" BorderThickness="0"/>
+        <TextBox x:Name="editTextVsource" TextChanging="etVs_TextChanging" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="10,111,0,0" PlaceholderText="Vs" FontSize="36" HorizontalAlignment="Left" Width="609" IsEnabled="False" InputScope="Number"/>
+        <CheckBox x:Name="checkBoxR1" Content="Resistance 1 (Ohms)" HorizontalAlignment="Left" Margin="10,186,0,0" VerticalAlignment="Top" FontSize="36" Width="609" Click="checkBoxR1_CheckedChanged" Height="55"/>
+        <TextBox x:Name="editTextR1" TextChanging="etR1_TextChanging" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="10,241,0,0" Width="609" PlaceholderText="R1" FontSize="36" IsEnabled="False" InputScope="Number"/>
+        <CheckBox x:Name="checkBoxR2" Content="Resistance 2 (Ohms)" HorizontalAlignment="Left" Margin="10,316,0,0" VerticalAlignment="Top" Width="609" FontSize="36" Click="checkBoxR2_CheckedChanged" Height="54"/>
+        <TextBox x:Name="editTextR2" TextChanging="etR2_TextChanging" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="10,370,0,0" Width="609" PlaceholderText="R2" FontSize="36" IsEnabled="False" InputScope="Number"/>
+        <CheckBox x:Name="checkBoxVout" Content="Output Voltage (Volts)" HorizontalAlignment="Left" Margin="10,446,0,0" VerticalAlignment="Top" Width="609" FontSize="36" Click="checkBoxVout_CheckedChanged" Height="55"/>
+        <TextBox x:Name="editTextVout" TextChanging="etVo_TextChanging" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="10,501,0,0" Width="609" PlaceholderText="Vo" FontSize="36" UseLayoutRounding="True" IsEnabled="False" InputScope="Number"/>
+        <Button x:Name="btnCalculate" Content="CALCULATE" Margin="10,585,0,65" Width="609" FontSize="36" Height="70" Click="btnCalculate_Click" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" />
+        <Button x:Name="btnClear" Content="RESET" Margin="660,585,11,65" Width="609" FontSize="36" Height="70" Click="btnClear_Click" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Stretch" />
+        <TextBlock x:Name="textView" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Input three of the four variables:" VerticalAlignment="Top" Width="609" FontSize="36" Height="46"/>
+        <TextBlock x:Name="textViewUpdated" HorizontalAlignment="Left" Margin="660,529,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="600" FontSize="30" Height="47" MinWidth="64" MinHeight="32"/>
+
+        <Image x:Name="imageView" Margin="660,0,0,135" Source="Assets/circuit.png" Stretch="None"/>
+
+
+    </Grid>
+</Page>
